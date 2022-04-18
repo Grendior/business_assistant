@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "@ionic/vue-router";
 import { Router } from "vue-router";
 
 import { routerOutlet } from "./utils/routerOutlet";
+import { publicRoute } from "./views/publicRoute/public.route";
 
 /**
  * Konfiguracja routingu
@@ -15,9 +16,9 @@ export function setupRouter(): Router {
     routes: [
       {
         path: "/",
-        // redirect: publicRoute,
+        redirect: publicRoute,
         component: routerOutlet,
-        // children: [publicRoute, startRoute, mainRoute]
+        children: [publicRoute],
       },
     ],
   });
