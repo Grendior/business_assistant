@@ -1,12 +1,12 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <!-- <ion-toolbar>
         <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
+      </ion-toolbar> -->
 
     <ion-content :fullscreen="true">
+      <ion-title :translucent="true">Asystent Firmy </ion-title>
+
       <div id="container">
         <strong>Ready to create an app?</strong>
         <p>
@@ -24,23 +24,15 @@
 </template>
 
 <script lang="ts">
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from "@ionic/vue";
+import { IonContent, IonPage, IonTitle } from "@ionic/vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "HomePage",
   components: {
     IonContent,
-    IonHeader,
     IonPage,
     IonTitle,
-    IonToolbar,
   },
 });
 </script>
