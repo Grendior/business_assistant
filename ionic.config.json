@@ -1,5 +1,7 @@
 {
-  "name": "business-assistant",
-  "integrations": {},
+  "name": "pl.witkac.kartamiekszanca",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "vue"
 }

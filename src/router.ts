@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from "@ionic/vue-router";
-import { Router } from "vue-router";
+import { createRouter, createWebHistory } from '@ionic/vue-router';
+import { Router } from 'vue-router';
 
-import { routerOutlet } from "./utils/routerOutlet";
-import { publicRoute } from "./views/publicRoute/public.route";
+import { routerOutlet } from './utils/routerOutlet';
+import { publicRoute } from './views/publicRoute/public.route';
 
 /**
  * Konfiguracja routingu
@@ -12,17 +12,16 @@ import { publicRoute } from "./views/publicRoute/public.route";
  */
 export function setupRouter(): Router {
   const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
       {
-        path: "/",
+        path: '/',
         redirect: publicRoute,
         component: routerOutlet,
-        children: [publicRoute],
-      },
-    ],
+        children: [publicRoute]
+      }
+    ]
   });
-
   return router;
 }
 

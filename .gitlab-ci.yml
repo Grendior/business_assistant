@@ -1,0 +1,7 @@
+test:
+  stage: test
+  tags:
+    - witkac.superdev.powershell
+  script:
+    - npm install
+    - npm run lint

@@ -1,14 +1,14 @@
-import { IonRouterOutlet } from "@ionic/vue";
-import { defineComponent, h, resolveComponent } from "vue";
+import { IonRouterOutlet } from '@ionic/vue';
+import { defineComponent, h, resolveComponent } from 'vue';
 
 /**
  * Pusty komponent do routingu
  */
 export const routerOutlet = defineComponent({
   components: {
-    IonRouterOutlet,
+    IonRouterOutlet
   },
   render() {
-    return h(resolveComponent("ion-router-outlet"));
-  },
+    return h(resolveComponent('ion-router-outlet'));
+  }
 });

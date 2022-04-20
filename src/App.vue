@@ -1,5 +1,5 @@
 <template>
-  <ion-app>
+  <ion-app style="--backgrounnd: #00000000">
     <ion-router-outlet />
   </ion-app>
 </template>
@@ -8,6 +8,9 @@
 import { IonApp, IonRouterOutlet } from "@ionic/vue";
 import { defineComponent } from "vue";
 
+/**
+ * Komponent główny aplikacji
+ */
 export default defineComponent({
   name: "App",
   components: {
