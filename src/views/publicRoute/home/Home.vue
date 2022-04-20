@@ -11,7 +11,7 @@
         </ion-label>
       </ion-item>
 
-      <ion-button expand="block">Logowanie</ion-button>
+      <ion-button :router-link="loginRoute" expand="block">Logowanie</ion-button>
 
       <ion-button expand="block">Rejestracja</ion-button>
     </ion-content>
@@ -21,6 +21,8 @@
 <script lang="ts">
 import { IonContent, IonPage, IonHeader, IonLabel, IonButton, IonItem, IonTitle } from '@ionic/vue';
 import { defineComponent } from 'vue';
+
+import { loginRoute } from '../../startRoute/login/login.route';
 
 /**
  * Widok główny
@@ -35,6 +37,11 @@ export default defineComponent({
     IonLabel,
     IonContent,
     IonTitle
+  },
+  setup() {
+    return {
+      loginRoute
+    };
   }
 });
 </script>

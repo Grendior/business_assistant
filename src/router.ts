@@ -3,6 +3,7 @@ import { Router } from 'vue-router';
 
 import { routerOutlet } from './utils/routerOutlet';
 import { publicRoute } from './views/publicRoute/public.route';
+import { startRoute } from './views/startRoute/start.route';
 
 /**
  * Konfiguracja routingu
@@ -18,7 +19,7 @@ export function setupRouter(): Router {
         path: '/',
         redirect: publicRoute,
         component: routerOutlet,
-        children: [publicRoute]
+        children: [publicRoute, startRoute]
       }
     ]
   });
