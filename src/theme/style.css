@@ -1,0 +1,59 @@
+:root {
+  --text: #1e1e1e;
+  --primary: #00bbea;
+  --border: #e6e6e6;
+  --icon: #888888;
+  --unnamed-color-ffffff: #ffffff;
+
+  /* Font/text values */
+  --unnamed-font-family-roboto: 'Roboto';
+  --unnamed-font-family-sans-serif: sans-serif;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-300: 300px;
+  --unnamed-font-weight-bold: bold;
+  --unnamed-font-weight-normal: normal;
+  --unnamed-font-size-12: 12px;
+  --unnamed-font-size-15: 15px;
+  --unnamed-font-size-16: 16px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-16: 16px;
+  --unnamed-line-spacing-20: 20px;
+  --unnamed-line-spacing-21: 21px;
+}
+
+.header {
+  font-weight: 200;
+  margin: 2rem 0 2rem 0;
+}
+
+.item-padding {
+  --padding-start: 0;
+  padding: 0 1rem 0 1rem;
+}
+.bold {
+  font-weight: 600;
+}
+
+.primary-button {
+  font-family: var(--unnamed-font-family-roboto), var(--unnamed-font-family-sans-serif);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-15);
+  line-height: var(--unnamed-line-spacing-20);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+  background-color: var(--primary) !important;
+  --background: var(--primary);
+}
+
+.outline-primary-button {
+  border: 1px solid var(--primary);
+  --border-color: var(--primary);
+  --border-style: solid;
+  --border-width: 0 2px 0 2px;
+  color: var(--primary);
+  --color: var(--primary);
+  background-color: var(--unnamed-color-ffffff) !important;
+  --background: var(--unnamed-color-ffffff);
+  font-weight: bold;
+}
