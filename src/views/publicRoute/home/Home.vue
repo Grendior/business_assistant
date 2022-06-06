@@ -1,10 +1,8 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-title>Business Assistant - home </ion-title>
-    </ion-header>
-
     <ion-content>
+      <ion-title size="large" mode="md" class="header">Business Assistant - home</ion-title>
+
       <ion-item lines="none" class="item-self-center-400">
         <ion-label class="ion-text-wrap text-align-center">
           <h1>Twoja Aplikacja do zarządzania firmą</h1>
@@ -13,16 +11,17 @@
 
       <ion-button :router-link="loginRoute" expand="block">Logowanie</ion-button>
 
-      <ion-button expand="block">Rejestracja</ion-button>
+      <ion-button :router-link="registerRoute" expand="block">Rejestracja</ion-button>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonContent, IonPage, IonHeader, IonLabel, IonButton, IonItem, IonTitle } from '@ionic/vue';
+import { IonContent, IonPage, IonLabel, IonButton, IonItem, IonTitle } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
-import { loginRoute } from '../../startRoute/login/login.route';
+import { loginRoute } from '@/views/startRoute/login/login.route';
+import { registerRoute } from '@/views/startRoute/register/register.route';
 
 /**
  * Widok główny
@@ -30,7 +29,6 @@ import { loginRoute } from '../../startRoute/login/login.route';
 export default defineComponent({
   name: 'App',
   components: {
-    IonHeader,
     IonPage,
     IonButton,
     IonItem,
@@ -40,7 +38,8 @@ export default defineComponent({
   },
   setup() {
     return {
-      loginRoute
+      loginRoute,
+      registerRoute
     };
   }
 });

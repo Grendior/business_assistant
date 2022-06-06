@@ -1,20 +1,18 @@
 <template>
   <ion-page>
     <ion-content>
-      <ion-toolbar>
-        <ion-title size="large" mode="md" class="header">Rejestracja</ion-title>
-      </ion-toolbar>
+      <ion-title size="large" mode="md" class="header">Rejestracja</ion-title>
 
       <ion-item class="item-padding">
         <ion-label for="email" position="floating">E-mail</ion-label>
 
-        <ion-input name="email" type="email" />
+        <ion-input v-model="email" name="email" type="email" />
       </ion-item>
 
       <ion-item class="item-padding">
         <ion-label for="password" position="floating"> Hasło</ion-label>
 
-        <ion-input name="password" type="password" />
+        <ion-input v-model="password" name="\password" type="password" />
       </ion-item>
 
       <ion-item>
@@ -35,13 +33,16 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonTitle, IonLabel, IonContent, IonItem, IonButton, IonText, IonToolbar, IonInput } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { IonPage, IonTitle, IonLabel, IonContent, IonItem, IonButton, IonText, IonInput } from '@ionic/vue';
+import { defineComponent, ref } from 'vue';
 
 import { router } from '@/router';
+import { authService } from '@/services/auth.service';
+import { loginRoute } from '@/views/startRoute/login/login.route';
 
-import { loginRoute } from '../login/login.route';
-
+/**
+ * Widok rejestracji
+ */
 export default defineComponent({
   components: {
     IonPage,
@@ -51,19 +52,26 @@ export default defineComponent({
     IonButton,
     IonText,
     IonItem,
-    IonToolbar,
     IonInput
   },
   setup() {
+    const email = ref<string>('');
+    const password = ref<string>('');
+
+    /**
+     * Rejestracja użytkownika
+     */
     function register() {
-      console.log('should be registered hello there');
-      return;
+      authService.addUser(email.value, password.value);
     }
 
     return {
-      register,
+      email,
+      loginRoute,
+      password,
       router,
-      loginRoute
+
+      register
     };
   }
 });
